@@ -13,10 +13,11 @@ $(document).on('turbolinks:load', function (){
     event.preventDefault();
     
     //Collect the credit card fields.
-    var ccNUm = $('#card-number').val(),
-        cvcNum = $('#card-code').val(),
+    var ccNum = $('#card_number').val(),
+        cvcNum = $('#card_code').val(),
         expMonth = $('#card_month').val(),
         expYear = $('#card_year').val();
+    
     //Send the card info to Stripe.
     Stripe.createToken({
       number: ccNum,
